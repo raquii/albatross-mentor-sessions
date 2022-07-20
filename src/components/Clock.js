@@ -35,13 +35,11 @@ function useSetClock() {
 
 	useEffect(() => {
 		const intervalId = setInterval(() => {
-			console.log("running");
 			const newTime = new Date().toLocaleTimeString();
 			setTime(newTime);
 		}, 1000);
 
 		return function () {
-			console.log("cleanup");
 			clearInterval(intervalId);
 		};
 	}, []);
@@ -61,7 +59,7 @@ function ClockTime() {
  * Returns Clock component with a toggle button
  */
 export default function Clock() {
-	const [showClock, setShowClock] = useState(true);
+	const [showClock, setShowClock] = useState(false);
 
 	return (
 		<div id="clock-container">
