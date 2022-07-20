@@ -6,10 +6,7 @@ import Toggle from "./Toggle";
 import NewPostForm from "./NewPostForm";
 import blogData from "./data/blog";
 
-// Reusable Components
-// Component Composition
-// Imperative React
-// In-line Handlers
+
 
 export default function App() {
 	const [isDarkMode, setIsDarkMode] = useState(false);
